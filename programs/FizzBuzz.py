@@ -7,4 +7,6 @@ def fizz_buzz(numbers):
             data.append("Fizz")
         elif num % 5 == 0:
             data.append("Buzz")
+        else:
+            data.append(None)
     return data
