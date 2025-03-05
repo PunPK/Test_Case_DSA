@@ -48,10 +48,11 @@ class TestStaircase(unittest.TestCase):
 
         n = 30
         display = "#"
-        expected_output = ""
+        expected_output = []
         for i in range(1, n + 1):
-            expected_output += " " * (n - i) + "#" * i + "\n"
-        expected_output = expected_output.strip()
+            row = " " * (n - i) + display * i
+            expected_output.append(row)
+        expected_output = "\n".join(expected_output)
         result = staircase(n, display)
 
         self.assertEqual(result, expected_output)
